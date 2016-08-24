@@ -1,0 +1,229 @@
+{
+
+  "schedule": [
+    {
+      "date": "2016-10-13",
+      "groups": [
+        {
+          "time": "8:30",
+          "sessions": [
+            {
+              "name": "Accueil",
+              "timeStart": "8:30",
+              "timeEnd": "9:00",
+              "location": "Hall",
+              "description": "Venez récupérer vos badges et profiter d'un café avant le début des sessions",
+              "tracks": ["Food"]
+            }
+          ]
+        },
+        {
+          "time": "9:00",
+          "sessions": [
+            {
+              "name": "Keynote collective : Team Jolokia & Patrouille de France",
+              "location": "Amphi G. Charpack",
+              "description": "bla bla keynote",
+              "speakerNames": ["Pierre Meisel", "Romain Bethoux"],
+              "timeStart": "9:00",
+              "timeEnd": "9:50",
+              "tracks": ["Keynote"]
+            }
+          ]
+        },
+        {
+          "time": "10:00",
+          "sessions": [
+            {
+              "name": "Diversité et performance : une expérience unique",
+              "location": "Salle A002",
+              "description": "Amphi G. Charpack",
+              "speakerNames": ["Erwan Charamel", "Matthieu Lepape"],
+              "timeStart": "10:00",
+              "timeEnd": "10:45",
+              "tracks": ["Conference"]
+            },
+            {
+              "name": "Une équipe de coachs agiles sur le grill...",
+              "location": "Amphi B. Pascal",
+              "description": "blabla description",
+              "speakerNames": ["Axel Villechalane", "Benoit Tisserand", "Cédric Bodin", "Guillaume Deberdt"],
+              "timeStart": "10:00",
+              "timeEnd": "10:45",
+              "tracks": ["Conference"]
+            },
+            {
+              "name": "ARTGILE",
+              "location": "Salle A001",
+              "description": "blabla description",
+              "speakerNames": ["Elodie Nedelec", "Frédéric Dufau-Joël", "Jean-Luc Guillou", "Jérôme Dard"],
+              "timeStart": "10:00",
+              "timeEnd": "10:45",
+              "tracks": ["Atelier"]
+            },
+            {
+              "name": "Savoir construire des équipes performantes : l'exemple de la voile",
+              "location": "Salle A002",
+              "description": "blabla description",
+              "speakerNames": ["Armel Cusin-Gogat", "Jacques Doll", "Nicolas Bunoust"],
+              "timeStart": "10:00",
+              "timeEnd": "11:30",
+              "tracks": ["Atelier"]
+            },
+            {
+              "name": "Un chemin en équipe : Créer l'équipe",
+              "location": "Salle A003",
+              "description": "Chemin en équipe 1",
+              "speakerNames": ["Agile Nantes"],
+              "timeStart": "10:00",
+              "timeEnd": "10:45",
+              "tracks": ["Atelier"]
+            }
+          ]
+        },
+        {
+          "time": "11:00",
+          "sessions": [
+            {
+              "name": "L’épanouissement de l’équipe au cœur de la performance",
+              "location": "Amphi G. Charpack",
+              "description": "L’épanouissement de l’équipe au cœur de la performance",
+              "speakerNames": ["Patrouille de France"],
+              "timeStart": "11:00",
+              "timeEnd": "11:45",
+              "tracks": ["Conference"]
+            }
+          ]
+        },
+        {
+          "time": "12:00 pm",
+          "sessions": [
+            {
+              "name": "Déjeuner",
+              "location": "Hall",
+              "description": "Venez vous restaurer autour du buffet et discuter agilité avec les autres participants",
+              "timeStart": "12:00",
+              "timeEnd": "13:00",
+              "tracks": ["Food"]
+            }
+          ]
+        }
+  ]
+}],
+
+
+  "speakers": [
+    {
+      "name": "Pierre Meisel",
+      "profilePic": "img/speakers/bear.jpg",
+      "twitter": "ionicframework",
+      "about": "Burt is a Bear.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Romain Bethoux",
+      "profilePic": "img/speakers/cheetah.jpg",
+      "twitter": "ionicframework",
+      "about": "Charlie is a Cheetah.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Erwan Charamel",
+      "profilePic": "img/speakers/duck.jpg",
+      "twitter": "ionicframework",
+      "about": "Donald is a Duck.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Matthieu Lepape",
+      "profilePic": "img/speakers/eagle.jpg",
+      "twitter": "ionicframework",
+      "about": "Eva is an Eagle.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Axel Villechalane",
+      "profilePic": "img/speakers/elephant.jpg",
+      "twitter": "ionicframework",
+      "about": "Ellie is an Elephant.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Benoit Tisserand",
+      "profilePic": "img/speakers/giraffe.jpg",
+      "twitter": "ionicframework",
+      "about": "Gino is a Giraffe.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Cédric Bodin",
+      "profilePic": "img/speakers/iguana.jpg",
+      "twitter": "ionicframework",
+      "about": "Isabella is an Iguana.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Guillaume Deberdt",
+      "profilePic": "img/speakers/kitten.jpg",
+      "twitter": "ionicframework",
+      "about": "Karl is a Kitten.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Elodie Nedelec",
+      "profilePic": "img/speakers/lion.jpg",
+      "twitter": "ionicframework",
+      "about": "Lionel is a Lion.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Frédéric Dufau-Joël",
+      "profilePic": "img/speakers/mouse.jpg",
+      "twitter": "ionicframework",
+      "about": "Molly is a Mouse.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Jean-Luc Guillou",
+      "profilePic": "img/speakers/puppy.jpg",
+      "twitter": "ionicframework",
+      "about": "Paul is a Puppy.",
+      "location": "Everywhere"
+    },
+    {
+      "name":  "Jérôme Dard",
+      "profilePic": "img/speakers/rabbit.jpg",
+      "twitter": "ionicframework",
+      "about": "Rachel is a Rabbit.",
+      "location": "Everywhere"
+    },
+    {
+      "name": "Armel Cusin-Gogat",
+      "profilePic": "img/speakers/turtle.jpg",
+      "twitter": "ionicframework",
+      "about": "Ted is a Turtle.",
+      "location": "Everywhere"
+    }
+  ],
+
+
+  "map": [
+    {
+      "name": "Monona Terrace Convention Center",
+      "lat": 43.071584,
+      "lng": -89.380120,
+      "center": true
+    },
+    {
+      "name": "Ionic HQ",
+      "lat": 43.074395,
+      "lng": -89.381056
+    },
+    {
+      "name": "Afterparty - Brocach Irish Pub",
+      "lat": 43.07336,
+      "lng": -89.38335
+    }
+  ]
+
+}

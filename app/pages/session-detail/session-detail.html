@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Session</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <h1>{{session.name}}</h1>
+    </ion-item>
+    <ion-item *ngFor="let speaker of session.speakers">
+      <ion-avatar item-left>
+        <img [src]="speaker.profilePic" [alt]="speaker.name">
+      </ion-avatar>
+      <h2>{{speaker.name}}</h2>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="alarm"></ion-icon>
+      {{session.timeStart}} - {{session.timeEnd}}
+    </ion-item>
+    <ion-item>
+      <ion-icon name="pin"></ion-icon>
+      {{session.location}}
+    </ion-item>
+    <ion-item>
+        <ion-icon name="book"></ion-icon>
+        {{session.description}}</ion-item>
+  </ion-card>
+</ion-content>

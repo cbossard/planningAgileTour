@@ -1,0 +1,36 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Sass
+// --------------------------------------------------
+// CSS that should apply to the app for every mode
+@import url(http://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:400italic,700italic,400,700);
+// Font Variables
+$fredoka-one: 'Fredoka One', serif;
+$open-sans: 'Open Sans', sans-serif;
+
+@font-face {
+    font-family: "open-sans";
+    font-weight: normal;
+    font-style: normal;
+  }
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the various page imports which make up this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+@import "../pages/about/about";
+
+@import "../pages/map/map";
+
+@import "../pages/schedule/schedule";
+
+@import "../pages/schedule-filter/schedule-filter";
+
+@import "../pages/speaker-detail/speaker-detail";
+
+@import "../pages/speaker-list/speaker-list";
+
+@import "../pages/infos-page/infos-page";
