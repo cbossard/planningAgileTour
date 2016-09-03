@@ -6,10 +6,10 @@
 
     <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
       <ion-segment-button value="all">
-        All
+        Toutes les sessions
       </ion-segment-button>
       <ion-segment-button value="favorites">
-        Favorites
+        Favoris
       </ion-segment-button>
     </ion-segment>
 
@@ -51,10 +51,10 @@
 
         <ion-item-options>
           <button favorite (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
-            Favorite
+            Ajouter aux favoris
           </button>
-          <button danger (click)="removeFavorite(slidingItem, session, 'Remove Favorite')" *ngIf="segment === 'favorites'">
-            Remove
+          <button danger (click)="removeFavorite(slidingItem, session, 'Supprimer le favori')" *ngIf="segment === 'favorites'">
+            Supprimer des favoris
           </button>
         </ion-item-options>
 
@@ -65,7 +65,7 @@
   </ion-list>
 
   <ion-list-header [hidden]="shownSessions > 0">
-      No Sessions Found / Slide a session to add to favorites
+      Slider une session pour l'ajouter aux favoris
   </ion-list-header>
 
 
