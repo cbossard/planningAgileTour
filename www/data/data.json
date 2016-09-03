@@ -206,6 +206,50 @@
     }
   ],
 
+  "sponsors": [
+    {
+      "name": "Ecole des Mines de Nantes",
+      "logo": "img/sponsors/logo-Mines_Nantes140.png",
+      "url": "http://www.mines-nantes.fr/",
+      "description": "L’École des Mines de Nantes forme les ingénieurs et chercheurs que réclame l’industrie. En relation étroite avec les entreprises, elle développe des cursus de formation qui répondent exactement à leurs besoins. Cette proximité offre une double garantie : aux entreprises, PME ou grands groupes de secteurs variés, l’assurance de toujours trouver parmi les diplômés de l’École les profils nécessaires à leur expansion ; aux élèves, la certitude de carrières passionnantes."
+    },
+    {
+      "name": "Alyotech France",
+      "logo": "img/sponsors/logo_alyotech_petit.png",
+      "url": "http://www.alyotech.fr",
+      "description": "Présent dans l'#aérospatial, la #défense, l'#énergie, les #télécoms, Alyotech est spécialisé en Conseil en Ingénierie & Système d'Information "
+    },
+    {
+      "name": "ASI",
+      "logo": "img/sponsors/logo_asi_petit.png",
+      "url": "http://www.asi.fr",
+      "description": "Entreprise de Services du Numérique spécialiste en #BusinessIntelligence #SocialBusiness #mobile #CRM"
+    },
+    {
+      "name": "Aubay",
+      "logo": "img/sponsors/logo_aubay_petit.png",
+      "url": "http://www.aubay.com",
+      "description": "Integration and technology consultancy group specialized in information and industrial systems, networks and telecommunications"
+    },
+    {
+      "name": "Conserto",
+      "logo": "img/sponsors/logo_conserto_petit.jpg",
+      "url": "http://www.conserto.pro",
+      "description": "Conserto, société #innovante et #dynamique, propose des prestations de #conseil et d’#expertise #informatique."
+    },
+    {
+      "name": "Association GERME",
+      "logo": "img/sponsors/logo-germe-transparent_petit.png",
+      "url": "http://www.germe.com",
+      "description": "Association loi 1901 et organisme de formation spécialisé dans l’accompagnement des cadres de direction dans leurs fonctions de management."
+    },
+    {
+      "name": "THALES",
+      "logo": "img/sponsors/logo_Thales_petit.gif",
+      "url": "http://www.thalesgroup.com",
+      "description": "Leading international electronics and systems group, addressing global #defence, #space, #aerospace, #security and #transportation markets."
+    }
+  ],
 
   "map": [
     {

@@ -39,40 +39,19 @@ ionic serve<ion-header>
 
     </ion-card>
 
-    <ion-card  class="about-sponsors">
+    <ion-card class="about-sponsors">
       Cet événement ne pourrait pas avoir lieu sans l'aide de nos sponsors :
-      <ion-list>
+
+      <ion-card *ngFor="let sponsor of sponsors">
         <ion-item>
-            <ion-thumbnail item-right>
-              <img src="img/sponsors/logo-Mines_Nantes140.png">
-            </ion-thumbnail>
-            <h2>Ecole des Mines de Nantes</h2>
+          <ion-thumbnail item-left>
+            <img [src]="sponsor.logo">
+          </ion-thumbnail>
+          <h2>{{sponsor.name}}</h2>
+          <span class="item-note">{{sponsor.description}}</span>
+          <button outline item-right (click)="openURL(sponsor)">details</button>
         </ion-item>
-        <ion-item>
-            <ion-thumbnail item-right>
-              <img src="img/sponsors/logo_aubay_petit.png">
-            </ion-thumbnail>
-            <h2>Aubay</h2>
-        </ion-item>
-        <ion-item>
-            <ion-thumbnail item-right>
-              <img src="img/sponsors/logo_Thales_petit.gif">
-            </ion-thumbnail>
-            <h2>THALES</h2>
-        </ion-item>
-        <ion-item>
-            <ion-thumbnail item-right>
-              <img src="img/sponsors/logo_asi_petit.png">
-            </ion-thumbnail>
-            <h2>ASI</h2>
-        </ion-item>
-        <ion-item>
-            <ion-thumbnail item-right>
-              <img src="img/sponsors/logo_alyotech_petit.png">
-            </ion-thumbnail>
-            <h2>Alyotech</h2>
-        </ion-item>
-      </ion-list>
       </ion-card>
+    </ion-card>
   </div>
 </ion-content>

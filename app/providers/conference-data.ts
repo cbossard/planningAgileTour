@@ -164,4 +164,10 @@ export class ConferenceData {
     });
   }
 
+  getSponsors() {
+    return this.load().then(data => {
+      return data.sponsors;
+    });
+  }
+
 }
