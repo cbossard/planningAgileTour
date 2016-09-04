@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { PopoverController, ViewController } from 'ionic-angular';
 import { ConferenceData } from '../../providers/conference-data';
 
+import { InAppBrowser } from 'ionic-native';
+
 @Component({
   template: `
     <ion-list>
@@ -41,6 +43,6 @@ export class AboutPage {
   }
 
   openURL(sponsor){
-    window.open(sponsor.url, '_blank', 'location=yes');
+    new InAppBrowser(sponsor.url, '_system');
   }
 }

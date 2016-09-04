@@ -32,36 +32,4 @@ export class SpeakerListPage {
   goToSpeakerTwitter(speaker) {
     new InAppBrowser(`https://twitter.com/${speaker.twitter}`, '_system');
   }
-
-  openSpeakerShare(speaker) {
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Share ' + speaker.name,
-      buttons: [
-        {
-          text: 'Copy Link',
-          handler: () => {
-            console.log('Copy link clicked on https://twitter.com/' + speaker.twitter);
-            if (window['cordova'] && window['cordova'].plugins.clipboard) {
-              window['cordova'].plugins.clipboard.copy('https://twitter.com/' + speaker.twitter);
-            }
-          }
-        },
-        {
-          text: 'Share via ...',
-          handler: () => {
-            console.log('Share via clicked');
-          }
-        },
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
-
-    actionSheet.present();
-  }
 }

@@ -9,9 +9,10 @@
   <div text-center>
     <img [src]="speaker.profilePic" [alt]="speaker.name"><br>
 
-    <button clear small twitter><ion-icon name="logo-twitter"></ion-icon></button>
-    <button clear small github><ion-icon name="logo-github"></ion-icon></button>
-    <button clear small instagram><ion-icon name="logo-instagram"></ion-icon></button>
+    <button clear small twitter (click)="goToSpeakerTwitter(speaker)" *ngIf="speaker.twitter !=''"><ion-icon name="logo-twitter"></ion-icon></button>
+    <button clear small googlePlus (click)="goToSpeakerGooglePlus(speaker)" *ngIf="speaker.googlePlus !=''"><ion-icon name="logo-googleplus"></ion-icon></button>
+    <button clear small github (click)="goToSpeakerGithub(speaker)" *ngIf="speaker.github !=''"><ion-icon name="logo-github"></ion-icon></button>
+    <p>{{speaker.society}}</p>
   </div>
 
   <p>{{speaker.about}}</p>

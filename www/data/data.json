@@ -13,7 +13,7 @@
               "timeEnd": "9:00",
               "location": "Hall",
               "description": "Venez récupérer vos badges et profiter d'un café avant le début des sessions",
-              "tracks": ["Food"]
+              "tracks": ["Pause"]
             }
           ]
         },
@@ -104,7 +104,20 @@
               "description": "Venez vous restaurer autour du buffet et discuter agilité avec les autres participants",
               "timeStart": "12:00",
               "timeEnd": "13:00",
-              "tracks": ["Food"]
+              "tracks": ["Pause"]
+            }
+          ]
+        },
+        {
+          "time": "13:00 pm",
+          "sessions": [
+            {
+              "name": "Temps collectif",
+              "location": "Hall",
+              "description": "Bla bla",
+              "timeStart": "13:00",
+              "timeEnd": "14:00",
+              "tracks": ["Rassemblement"]
             }
           ]
         }
@@ -117,76 +130,108 @@
       "name": "Pierre Meisel",
       "profilePic": "img/speakers/bear.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Burt is a Bear.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Romain Bethoux",
       "profilePic": "img/speakers/cheetah.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Charlie is a Cheetah.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Erwan Charamel",
       "profilePic": "img/speakers/duck.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Donald is a Duck.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Matthieu Lepape",
       "profilePic": "img/speakers/eagle.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Eva is an Eagle.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Axel Villechalane",
       "profilePic": "img/speakers/elephant.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Ellie is an Elephant.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Benoit Tisserand",
       "profilePic": "img/speakers/giraffe.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Gino is a Giraffe.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Cédric Bodin",
       "profilePic": "img/speakers/iguana.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Isabella is an Iguana.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Guillaume Deberdt",
       "profilePic": "img/speakers/kitten.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Karl is a Kitten.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Elodie Nedelec",
       "profilePic": "img/speakers/lion.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Lionel is a Lion.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Frédéric Dufau-Joël",
       "profilePic": "img/speakers/mouse.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Molly is a Mouse.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Jean-Luc Guillou",
       "profilePic": "img/speakers/puppy.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Paul is a Puppy.",
       "location": "Everywhere"
     },
@@ -194,15 +239,21 @@
       "name":  "Jérôme Dard",
       "profilePic": "img/speakers/rabbit.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Rachel is a Rabbit.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     },
     {
       "name": "Armel Cusin-Gogat",
       "profilePic": "img/speakers/turtle.jpg",
       "twitter": "ionicframework",
+      "googlePlus": "ionic",
+      "github": "ionic",
       "about": "Ted is a Turtle.",
-      "location": "Everywhere"
+      "location": "Everywhere",
+      "society": "A Corp."
     }
   ],
 
@@ -254,25 +305,6 @@
       "logo": "img/sponsors/logo_Thales_petit.gif",
       "url": "http://www.thalesgroup.com",
       "description": "Leading international electronics and systems group, addressing global #defence, #space, #aerospace, #security and #transportation markets."
-    }
-  ],
-
-  "map": [
-    {
-      "name": "Monona Terrace Convention Center",
-      "lat": 43.071584,
-      "lng": -89.380120,
-      "center": true
-    },
-    {
-      "name": "Ionic HQ",
-      "lat": 43.074395,
-      "lng": -89.381056
-    },
-    {
-      "name": "Afterparty - Brocach Irish Pub",
-      "lat": 43.07336,
-      "lng": -89.38335
     }
   ]
 
