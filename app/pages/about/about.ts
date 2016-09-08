@@ -28,12 +28,16 @@ class PopoverPage {
   templateUrl: 'build/pages/about/about.html'
 })
 export class AboutPage {
-  conferenceDate = '2047-05-17';
   sponsors=[];
+  infos=[];
 
   constructor(public popoverCtrl: PopoverController, confData: ConferenceData) {
     confData.getSponsors().then(sponsors => {
       this.sponsors = sponsors;
+    });
+
+    confData.getInfos().then(infos => {
+      this.infos = infos;
     });
   }
 

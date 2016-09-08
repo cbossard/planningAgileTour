@@ -8,27 +8,27 @@
 </ion-header>
 
 <ion-content>
-  <div padding class="about-info">
+  <div padding class="about-info"  *ngFor="let info of infos">
     <ion-list no-lines>
       <ion-item>
         <ion-icon name="wifi" item-left></ion-icon>
         <ion-label>Wifi</ion-label>
         <ion-label>
-          Réseau : 123 <br/>
-          Login : 456 <br/>
-          Mot de passe : 789
+          Réseau : {{info.wifiNetwork}} <br/>
+          Login : {{info.wifiLogin}} <br/>
+          Mot de passe : {{info.wifiPassword}}
         </ion-label>
       </ion-item>
 
       <ion-item>
         <ion-icon name="logo-twitter" item-left></ion-icon>
         <ion-label>Twitter</ion-label>
-        <ion-label><a href="https://twitter.com/intent/tweet?button_hashtag=atnantes" class="twitter-hashtag-button" data-show-count="false">Tweet #atnantes</a></ion-label>
+        <ion-label><a href="https://twitter.com/intent/tweet?button_hashtag={{info.eventHashtag}}" class="twitter-hashtag-button" data-show-count="false">Tweet #{{info.eventHashtag}}</a></ion-label>
           <twitter-timeline>
               <a class="twitter-timeline"
-                 href="https://twitter.com/hashtag/atnantes"
+                 href="https://twitter.com/hashtag/{{info.eventHashtag}}"
                  data-widget-id="764818229491630081">
-                 Tweets from https://twitter.com/hashtag/atnantes
+                 Tweets from https://twitter.com/hashtag/{{info.eventHashtag}}
               </a>
           </twitter-timeline>
 

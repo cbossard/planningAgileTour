@@ -9,6 +9,22 @@
     <ion-item>
       <h1>{{session.name}}</h1>
     </ion-item>
+    <ion-item [ngSwitch]="session.level">
+      Difficulté :
+      <ion-icon name="star"></ion-icon>
+      <template [ngSwitchCase]="'1'">
+        <ion-icon name="star-outline" ></ion-icon>
+        <ion-icon name="star-outline" ></ion-icon>
+      </template>
+      <template [ngSwitchCase]="'2'">
+        <ion-icon name="star" ></ion-icon>
+        <ion-icon name="star-outline" ></ion-icon>
+      </template>
+        <template [ngSwitchCase]="'3'">
+        <ion-icon name="star" ></ion-icon>
+        <ion-icon name="star" ></ion-icon>
+      </template>
+    </ion-item>
     <ion-item *ngFor="let speaker of session.speakers">
       <ion-avatar item-left>
         <img [src]="speaker.profilePic" [alt]="speaker.name">
@@ -23,8 +39,9 @@
       <ion-icon name="pin"></ion-icon>
       {{session.location}}
     </ion-item>
-    <ion-item>
+    <ion-item class="description">
         <ion-icon name="book"></ion-icon>
-        {{session.description}}</ion-item>
+        {{session.description}}
+    </ion-item>
   </ion-card>
 </ion-content>

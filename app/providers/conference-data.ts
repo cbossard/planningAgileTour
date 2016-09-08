@@ -170,4 +170,10 @@ export class ConferenceData {
     });
   }
 
+  getInfos(){
+    return this.load().then(data => {
+      return data.eventInfos;
+    });
+  }
+
 }

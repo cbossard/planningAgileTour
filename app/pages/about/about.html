@@ -12,32 +12,22 @@ ionic serve<ion-header>
   <div class="about-header">
     <img src="img/logo.png">
   </div>
-  <div padding class="about-info">
+  <div padding class="about-info" *ngFor="let info of infos">
     <ion-list no-lines>
       <ion-item class="about-info item">
         <ion-icon name="calendar" item-left></ion-icon>
         <ion-label>Date</ion-label>
-        <ion-label>13 octobre 2016</ion-label>
+        <ion-label>{{info.eventDate}}</ion-label>
       </ion-item>
 
       <ion-item class="about-info item">
         <ion-icon name="pin" item-left></ion-icon>
         <ion-label>Lieu</ion-label>
-        <ion-label>Ecole des Mines de Nantes<br>4 rue Alfred Kastler, 44300 Nantes</ion-label>
+        <ion-label class="nobreak">{{info.eventLocationName}}<br/>{{info.eventLocationAdress}}</ion-label>
       </ion-item>
     </ion-list>
 
-    <ion-card class="about-info">
-          L'Agile Tour est une conférence dédiée à l'agilité, qui a lieu dans le monde entier.<br/>
-          Depuis plusieurs années, l'Agile Tour a été un moyen de faire découvrir l'agilité
-          et de partager les expériences, bonnes ou mauvaises, avec les communautés locales.<br/>
-          Cette année encore, l'Agile Tour fait étape à Nantes.<br/>
-          Le thème de cette année : l'expérience ! Pas de thérorie, que de la pratique !<br/>
-          Que vous soyez une équipe, un manager, un coach, un développeur, ou que vous
-          exerciez un autre métier venez partager votre histoire :
-          ce que vous avez vécu, vos réussites, vos échecs, vos questions, votre avenir etc.
-
-    </ion-card>
+    <ion-card class="about-info" [innerHTML]="info.eventDescription"></ion-card>
 
     <ion-card class="about-sponsors">
       Cet événement ne pourrait pas avoir lieu sans l'aide de nos sponsors :

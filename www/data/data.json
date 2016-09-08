@@ -27,7 +27,8 @@
               "speakerNames": ["Pierre Meisel", "Romain Bethoux"],
               "timeStart": "9:00",
               "timeEnd": "9:50",
-              "tracks": ["Keynote"]
+              "tracks": ["Keynote"],
+              "level": "3"
             }
           ]
         },
@@ -41,7 +42,8 @@
               "speakerNames": ["Erwan Charamel", "Matthieu Lepape"],
               "timeStart": "10:00",
               "timeEnd": "10:45",
-              "tracks": ["Conference"]
+              "tracks": ["Conference"],
+              "level": "1"
             },
             {
               "name": "Une équipe de coachs agiles sur le grill...",
@@ -50,7 +52,8 @@
               "speakerNames": ["Axel Villechalane", "Benoit Tisserand", "Cédric Bodin", "Guillaume Deberdt"],
               "timeStart": "10:00",
               "timeEnd": "10:45",
-              "tracks": ["Conference"]
+              "tracks": ["Conference"],
+              "level": "1"
             },
             {
               "name": "ARTGILE",
@@ -59,7 +62,8 @@
               "speakerNames": ["Elodie Nedelec", "Frédéric Dufau-Joël", "Jean-Luc Guillou", "Jérôme Dard"],
               "timeStart": "10:00",
               "timeEnd": "10:45",
-              "tracks": ["Atelier"]
+              "tracks": ["Atelier"],
+              "level": "1"
             },
             {
               "name": "Savoir construire des équipes performantes : l'exemple de la voile",
@@ -68,7 +72,8 @@
               "speakerNames": ["Armel Cusin-Gogat", "Jacques Doll", "Nicolas Bunoust"],
               "timeStart": "10:00",
               "timeEnd": "11:30",
-              "tracks": ["Atelier"]
+              "tracks": ["Atelier"],
+              "level": "2"
             },
             {
               "name": "Un chemin en équipe : Créer l'équipe",
@@ -77,7 +82,8 @@
               "speakerNames": ["Agile Nantes"],
               "timeStart": "10:00",
               "timeEnd": "10:45",
-              "tracks": ["Atelier"]
+              "tracks": ["Atelier"],
+              "level": "2"
             }
           ]
         },
@@ -91,7 +97,8 @@
               "speakerNames": ["Patrouille de France"],
               "timeStart": "11:00",
               "timeEnd": "11:45",
-              "tracks": ["Conference"]
+              "tracks": ["Conference"],
+              "level": "1"
             }
           ]
         },
@@ -117,7 +124,8 @@
               "description": "Bla bla",
               "timeStart": "13:00",
               "timeEnd": "14:00",
-              "tracks": ["Rassemblement"]
+              "tracks": ["Rassemblement"],
+              "level": "1"
             }
           ]
         }
@@ -305,6 +313,19 @@
       "logo": "img/sponsors/logo_Thales_petit.gif",
       "url": "http://www.thalesgroup.com",
       "description": "Leading international electronics and systems group, addressing global #defence, #space, #aerospace, #security and #transportation markets."
+    }
+  ],
+
+  "eventInfos": [
+    {
+      "eventDate": "13 octobre 2016",
+      "eventLocationName": "Ecole des Mines de Nantes",
+      "eventLocationAdress": "4 rue Alfred Kastler, 44300 Nantes",
+      "eventDescription": "L'Agile Tour est une conférence dédiée à l'agilité, qui a lieu dans le monde entier.<br/>Depuis plusieurs années, l'Agile Tour a été un moyen de faire découvrir l'agilité et de partager les expériences, bonnes ou mauvaises, avec les communautés locales.<br> Cette année encore, l'Agile Tour fait étape à Nantes.<br> Le thème de cette année : l'expérience ! Pas de thérorie, que de la pratique !<br> Que vous soyez une équipe, un manager, un coach, un développeur, ou que vous exerciez un autre métier venez partager votre histoire : ce que vous avez vécu, vos réussites, vos échecs, vos questions, votre avenir etc.",
+      "eventHashtag": "atnantes",
+      "wifiNetwork": "network",
+      "wifiLogin": "toto",
+      "wifiPassword" : "titi"
     }
   ]
 
