@@ -16,6 +16,7 @@ interface PageObj {
 
 @Component({
   templateUrl: 'build/app.html'
+
 })
 class ConferenceApp {
   // the root nav is a child of the root app component
@@ -31,7 +32,7 @@ class ConferenceApp {
     { title: 'Speakers', component: TabsPage, index: 2, icon: 'contacts' },
     { title: 'Plan', component: TabsPage, index: 3, icon: 'map' },
     { title: 'Informations pratiques', component: TabsPage, index: 4, icon: 'information-circle' }
-  ]
+  ];
   rootPage: any = TabsPage;
 
   constructor(

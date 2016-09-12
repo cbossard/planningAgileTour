@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
 
 import { PopoverController, ViewController } from 'ionic-angular';
+
+import { Sponsor } from '../../providers/sponsor-service/sponsor';
+
+
 import { ConferenceData } from '../../providers/conference-data';
+import { SponsorService } from '../../providers/sponsor-service/sponsor-service';
+import { Firebaseservice } from '../../providers/firebaseservice/firebaseservice';
+
+
 
 import { InAppBrowser } from 'ionic-native';
+import { OnInit } from '@angular/core';
 
 @Component({
   template: `
@@ -25,21 +34,34 @@ class PopoverPage {
 }
 
 @Component({
-  templateUrl: 'build/pages/about/about.html'
+  templateUrl: 'build/pages/about/about.html',
+  providers: [SponsorService]
 })
-export class AboutPage {
-  sponsors=[];
+export class AboutPage implements OnInit{
+  sponsors: Sponsor[];
   infos=[];
+  errorMessage;
 
-  constructor(public popoverCtrl: PopoverController, confData: ConferenceData) {
-    confData.getSponsors().then(sponsors => {
-      this.sponsors = sponsors;
-    });
+  constructor(public popoverCtrl: PopoverController, private sponsorService: SponsorService, private confData: ConferenceData) {}
 
-    confData.getInfos().then(infos => {
+  ngOnInit(){
+    this.getSponsors();
+    this.getInfos();
+  }
+
+  getSponsors(){
+
+    this.sponsorService.getSponsors().subscribe(
+      sponsors => this.sponsors = sponsors
+    );
+  }
+
+  getInfos(){
+    this.confData.getInfos().then(infos => {
       this.infos = infos;
     });
   }
+
 
   presentPopover(event) {
     let popover = this.popoverCtrl.create(PopoverPage);
