@@ -1,21 +1,30 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { OnInit } from '@angular/core';
 
-import { ConferenceData } from '../../providers/conference-data';
+import { Infos } from '../../providers/info-service/infos';
+import { InfoService } from '../../providers/info-service/info-service';
 
 @Component({
   templateUrl: 'build/pages/infos-page/infos-page.html',
+  providers: [InfoService]
 })
 
 export class InfosPage {
 
-  infos=[];
+  infos: Infos[];
 
-  constructor(private navCtrl: NavController, confData: ConferenceData) {
+  constructor(private navCtrl: NavController, private infoService: InfoService) {
+  }
 
-    confData.getInfos().then(infos => {
-      this.infos = infos;
-    });
+  ngOnInit(){
+    this.getInfos();
+  }
+
+  getInfos(){
+    this.infoService.getInfos().subscribe(
+      infos => this.infos = infos
+    );
   }
 
 }

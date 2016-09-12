@@ -7,7 +7,6 @@ import { Sponsor } from '../../providers/sponsor-service/sponsor';
 
 import { InfoService } from '../../providers/info-service/info-service';
 import { SponsorService } from '../../providers/sponsor-service/sponsor-service';
-import { Firebaseservice } from '../../providers/firebaseservice/firebaseservice';
 
 import { InAppBrowser } from 'ionic-native';
 import { OnInit } from '@angular/core';
@@ -38,7 +37,7 @@ class PopoverPage {
 export class AboutPage implements OnInit{
   sponsors: Sponsor[];
   infos: Infos[];
-  
+
   constructor(public popoverCtrl: PopoverController, private sponsorService: SponsorService, private infoService: InfoService) {}
 
   ngOnInit(){
@@ -47,7 +46,6 @@ export class AboutPage implements OnInit{
   }
 
   getSponsors(){
-
     this.sponsorService.getSponsors().subscribe(
       sponsors => this.sponsors = sponsors
     );

@@ -143,7 +143,7 @@ export class ConferenceData {
     session.hide = !(matchesQueryText && matchesTracks && matchesSegment);
   }
 
-  getSpeakers() {
+/*  getSpeakers() {
     return this.load().then(data => {
       return data.speakers.sort((a, b) => {
         let aName = a.name.split(' ').pop();
@@ -151,7 +151,7 @@ export class ConferenceData {
         return aName.localeCompare(bName);
       });
     });
-  }
+  }*/
 
   getTracks() {
     return this.load().then(data => {
@@ -162,17 +162,6 @@ export class ConferenceData {
   getMap() {
     return this.load().then(data => {
       return data.map;
-    });
-  }
-
-  private extractData(res: Response) {
-    let body = res.json();
-    return body.data || { };
-  }
-
-  getInfos(){
-    return this.load().then(data => {
-      return data.eventInfos;
     });
   }
 
