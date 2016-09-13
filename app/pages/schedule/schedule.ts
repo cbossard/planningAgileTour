@@ -2,11 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 
 import { AlertController, App, ItemSliding, List, ModalController, NavController } from 'ionic-angular';
 
-import { ConferenceData } from '../../providers/conference-data';
+//import { ConferenceData } from '../../providers/conference-data';
 import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { SessionDetailPage } from '../session-detail/session-detail';
-import { UserData } from '../../providers/user-data';
+import { UserData } from '../../providers/schedule-service/user-data';
 
+import { ScheduleService } from '../../providers/schedule-service/schedule-service';
 
 @Component({
   templateUrl: 'build/pages/schedule/schedule.html'
@@ -30,7 +31,7 @@ export class SchedulePage {
     public app: App,
     public modalCtrl: ModalController,
     public navCtrl: NavController,
-    public confData: ConferenceData,
+    public scheduleService: ScheduleService,
     public user: UserData
   ) {
 
@@ -48,7 +49,7 @@ export class SchedulePage {
     // Close any open sliding items when the schedule updates
     this.scheduleList && this.scheduleList.closeSlidingItems();
 
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then(data => {
+    this.scheduleService.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then(data => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
     });

@@ -3,9 +3,10 @@ import { Component, ViewChild } from '@angular/core';
 import { Events, ionicBootstrap, MenuController, Nav, Platform } from 'ionic-angular';
 import { Splashscreen, StatusBar } from 'ionic-native';
 
-import { ConferenceData } from './providers/conference-data';
+//import { ConferenceData } from './providers/conference-data';
 import { TabsPage } from './pages/tabs/tabs';
-import { UserData } from './providers/user-data';
+import { UserData } from './providers/schedule-service/user-data';
+import { ScheduleService } from './providers/schedule-service/schedule-service.ts';
 
 interface PageObj {
   title: string;
@@ -16,7 +17,6 @@ interface PageObj {
 
 @Component({
   templateUrl: 'build/app.html'
-
 })
 class ConferenceApp {
   // the root nav is a child of the root app component
@@ -40,7 +40,7 @@ class ConferenceApp {
     public userData: UserData,
     public menu: MenuController,
     platform: Platform,
-    confData: ConferenceData
+    scheduleService: ScheduleService
   ) {
     // Call any initial plugins when ready
     platform.ready().then(() => {
@@ -49,7 +49,7 @@ class ConferenceApp {
     });
 
     // load the conference data
-    confData.load();
+    scheduleService.load();
 
     // decide which menu items should be hidden by current login status stored in local storage
     this.userData.hasLoggedIn().then((hasLoggedIn) => {
@@ -108,4 +108,4 @@ class ConferenceApp {
 // See the theming docs for the default values:
 // http://ionicframework.com/docs/v2/theming/platform-specific-styles/
 
-ionicBootstrap(ConferenceApp, [ConferenceData, UserData], { });
+ionicBootstrap(ConferenceApp, [ScheduleService, UserData], { });

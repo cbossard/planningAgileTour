@@ -25,6 +25,9 @@
         <ion-icon name="star" ></ion-icon>
       </template>
     </ion-item>
+    <ion-item *ngFor="let track of session.tracks">
+      Track : {{track}}
+    </ion-item>
     <ion-item *ngFor="let speaker of session.speakers">
       <ion-avatar item-left>
         <img [src]="speaker.profilePic" [alt]="speaker.name">
