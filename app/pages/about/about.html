@@ -32,16 +32,13 @@ ionic serve<ion-header>
     <ion-card class="about-sponsors">
       Cet événement ne pourrait pas avoir lieu sans l'aide de nos sponsors :
 
-      <ion-card *ngFor="let sponsor of sponsors">
-        <ion-item>
-          <ion-thumbnail item-left>
-            <img [src]="sponsor.logo">
-          </ion-thumbnail>
-          <h2>{{sponsor.name}}</h2>
-          <span class="item-note">{{sponsor.description}}</span>
-          <button outline item-right (click)="openURL(sponsor)">details</button>
-        </ion-item>
-      </ion-card>
+      <ion-slides [options]="mySlideOptions">
+        <ion-slide *ngFor="let sponsor of sponsors">
+             <div align="center">
+               <img [src]="sponsor.logo" (click)="openURL(sponsor)" >
+             </div>
+        </ion-slide>
+      </ion-slides>
     </ion-card>
   </div>
 </ion-content>

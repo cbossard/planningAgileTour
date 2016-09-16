@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Slides } from 'ionic-angular';
 
 import { PopoverController, ViewController } from 'ionic-angular';
 
@@ -37,6 +38,12 @@ class PopoverPage {
 export class AboutPage implements OnInit{
   sponsors: Sponsor[];
   infos: Infos[];
+
+  mySlideOptions = {
+    initialSlide: 0,
+    autoplay: 5000,
+    loop: true
+  };
 
   constructor(public popoverCtrl: PopoverController, private sponsorService: SponsorService, private infoService: InfoService) {}
 
