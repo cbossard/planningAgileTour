@@ -30,9 +30,9 @@
     </ion-item>
     <ion-item *ngFor="let speaker of session.speakers">
       <ion-avatar item-left>
-        <img [src]="speaker.profilePic" [alt]="speaker.name">
+        <img [src]="speaker.profilePic">
       </ion-avatar>
-      <h2>{{speaker.name}}</h2>
+        <h2>{{speaker.name}}</h2>
     </ion-item>
     <ion-item>
       <ion-icon name="alarm"></ion-icon>
@@ -46,5 +46,8 @@
         <ion-icon name="book"></ion-icon>
         {{session.description}}
     </ion-item>
+    <button (click)="showModal()">
+      <ion-icon name="paper-plane"></ion-icon>Envoyer un feedback sur la session
+    </button>
   </ion-card>
 </ion-content>

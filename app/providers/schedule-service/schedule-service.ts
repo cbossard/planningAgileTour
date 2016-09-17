@@ -17,9 +17,17 @@ export class ScheduleService {
   private scheduleUrl = 'schedule.json';  // URL to web api
   private speakerUrl = 'speakers.json';  // URL to web api
 
-  constructor(private http: Http, public user: UserData) {}
+  constructor(private http: Http, public user: UserData) {
 
-  getSpeakers(): Observable<Speaker[]> {
+    this.http.get(SERVER_URL + this.speakerUrl).subscribe(res => {
+      // we've got back the raw data, now generate the core schedule data
+      // and save the data for later reference
+      this.speakers = this.extractData(res);
+    });
+
+  }
+
+  getSpeakers(){
 
     return this.http.get(SERVER_URL + this.speakerUrl)
                    .map(this.extractData);
@@ -41,10 +49,6 @@ export class ScheduleService {
     // don't have the data yet
     return new Promise(resolve => {
 
-      // TODO
-      this.speakers = [{"about":"Burt is a Bear.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Pierre Meisel","profilePic":"img/speakers/bear.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Charlie is a Cheetah.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Romain Bethoux","profilePic":"img/speakers/cheetah.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Donald is a Duck.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Erwan Charamel","profilePic":"img/speakers/duck.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Eva is an Eagle.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Matthieu Lepape","profilePic":"img/speakers/eagle.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Ellie is an Elephant.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Axel Villechalane","profilePic":"img/speakers/elephant.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Gino is a Giraffe.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Benoit Tisserand","profilePic":"img/speakers/giraffe.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Isabella is an Iguana.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Cédric Bodin","profilePic":"img/speakers/iguana.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Karl is a Kitten.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Guillaume Deberdt","profilePic":"img/speakers/kitten.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Lionel is a Lion.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Elodie Nedelec","profilePic":"img/speakers/lion.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Molly is a Mouse.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Frédéric Dufau-Joël","profilePic":"img/speakers/mouse.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Paul is a Puppy.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Jean-Luc Guillou","profilePic":"img/speakers/puppy.jpg","twitter":"ionicframework"},{"about":"Rachel is a Rabbit.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Jérôme Dard","profilePic":"img/speakers/rabbit.jpg","society":"A Corp.","twitter":"ionicframework"},{"about":"Ted is a Turtle.","github":"ionic","googlePlus":"ionic","location":"Everywhere","name":"Armel Cusin-Gogat","profilePic":"img/speakers/turtle.jpg","society":"A Corp.","twitter":"ionicframework"}];
-
-
       // We're using Angular Http provider to request the data,
       // then on the response it'll map the JSON data to a parsed JS object.
       // Next we process the data and resolve the promise with the new data.
@@ -55,11 +59,6 @@ export class ScheduleService {
         resolve(this.data);
       });
     });
-  }
-
-  private processSpeakers(res: Response){
-    let body = res.json();
-    return body || { };
   }
 
   processData(data) {
