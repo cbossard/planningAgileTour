@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button (click)="dismiss()">Cancel</button>
+    </ion-buttons>
+
+    <ion-title>
+      Envoyer un feedback
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <form [formGroup]="feedbackForm" (submit)="sendFeedback()">
+    <ion-list>
+      <ion-item>
+          <ion-label floating>Votre nom</ion-label>
+          <ion-input type="text" value="" required formControlName="lastName"></ion-input>
+          <control-messages [control]="feedbackForm.controls.lastName"></control-messages>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Votre prénom</ion-label>
+          <ion-input type="text" value="" required formControlName="firstName">></ion-input>
+          <control-messages [control]="feedbackForm.controls.firstName"></control-messages>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Votre adresse e-mail</ion-label>
+          <ion-input type="text" value="" required formControlName="email">></ion-input>
+          <control-messages [control]="feedbackForm.controls.email"></control-messages>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Votre note (/10)</ion-label>
+        <ion-input type="number" placeholder="Votre note (/10)" max="10" min="0" required formControlName="note">></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Votre message</ion-label>
+          <ion-input type="text" value="" formControlName="message">></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </form>
+  <button full type="submit" [disabled]="!feedbackForm.valid" (click)="sendFeedback()">
+    <ion-icon name="paper-plane"></ion-icon>Envoyer aux orateurs
+  </button>
+</ion-content>
