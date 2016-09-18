@@ -21,10 +21,9 @@ export class FeedbackPage {
   constructor(private viewCtrl: ViewController,   public navParams: NavParams, private formBuilder: FormBuilder, http: Http) {
     this.session = this.navParams.data;
     this.feedbackForm = formBuilder.group({
-      'firstName': ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
-      'lastName': ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
-      'email': ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
-      'message': ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      'name': ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      'email': ['', [Validators.required]],
+      'message': [''],
       'note': ['', [Validators.required]]
     });
 
@@ -43,7 +42,7 @@ export class FeedbackPage {
 
     var mailTitle = "[Agile Tour Nantes] Un nouveau feedback sur votre session \""+this.session.name + "\"";
 
-    var mailContent = "Bonjour !\n\n"+this.feedbackForm.value.firstName + " " +this.feedbackForm.value.lastName +" vient de vous envoyer un nouveau feedback sur votre session.\n\nNote : " + this.feedbackForm.value.note + "/10\n\nMessage : " + this.feedbackForm.value.message+"\n\nVous pouvez lui répondre à l'adresse suivante : "+this.feedbackForm.value.email + ".\n\nL'associaiton Agile Nantes";
+    var mailContent = "Bonjour !\n\n"+this.feedbackForm.value.name + " vient de vous envoyer un nouveau feedback sur votre session.\n\nNote : " + this.feedbackForm.value.note + "/10\n\nMessage : " + this.feedbackForm.value.message+"\n\nVous pouvez lui répondre à l'adresse suivante : "+this.feedbackForm.value.email + ".\n\nL'associaiton Agile Nantes";
 
     this.send("cecilia.bossard@gmail.com", mailTitle, mailContent);
 
