@@ -30,7 +30,7 @@
       </ion-list>
     </ion-card-content>
 
-    <ion-item>
+    <ion-item *ngIf="speaker.twitter !=''">
       <button (click)="goToSpeakerTwitter(speaker)" clear item-left>
         <ion-icon name="logo-twitter"></ion-icon>
         Voir ses tweets
