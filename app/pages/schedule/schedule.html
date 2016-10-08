@@ -41,7 +41,7 @@
       <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase" [hidden]="session.hide">
 
         <button ion-item (click)="goToSessionDetail(session)" side="left">
-          <h3 style="text-align='left'">{{session.name}}</h3>
+          <h3 style="text-align='left'"  class="nobreak">{{session.name}}</h3>
           <p text-align="left">
             {{session.timeStart}} &mdash;
             {{session.timeEnd}}:
@@ -65,7 +65,7 @@
   </ion-list>
 
   <ion-list-header [hidden]="shownSessions > 0">
-      Sur la liste des sessions, slider une session vers la gauche pour l'ajouter aux favoris 
+      <div class="nobreak">Sur la liste des sessions, slider une session vers la gauche pour l'ajouter aux favoris</div>
   </ion-list-header>
 
 

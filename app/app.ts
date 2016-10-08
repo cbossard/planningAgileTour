@@ -27,9 +27,9 @@ class ConferenceApp {
   // the left menu only works after login
   // the login page disables the left menu
   appPages: PageObj[] = [
-    { title: 'A propos', component: TabsPage, icon: 'easel' },
+    { title: 'Accueil', component: TabsPage, icon: 'easel' },
     { title: 'Planning', component: TabsPage,  index: 1, icon: 'calendar' },
-    { title: 'Speakers', component: TabsPage, index: 2, icon: 'contacts' },
+    { title: 'Orateurs', component: TabsPage, index: 2, icon: 'contacts' },
     { title: 'Plan', component: TabsPage, index: 3, icon: 'map' },
     { title: 'Informations pratiques', component: TabsPage, index: 4, icon: 'information-circle' }
   ];

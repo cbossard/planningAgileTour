@@ -12,7 +12,6 @@
     <ion-list no-lines>
       <ion-item>
         <ion-icon name="wifi" item-left></ion-icon>
-        <ion-label>Wifi</ion-label>
         <ion-label>
           Réseau : {{info.wifiNetwork}} <br/>
           Login : {{info.wifiLogin}} <br/>
@@ -22,7 +21,6 @@
 
       <ion-item>
         <ion-icon name="logo-twitter" item-left></ion-icon>
-        <ion-label>Twitter</ion-label>
         <ion-label><a href="https://twitter.com/intent/tweet?button_hashtag={{info.eventHashtag}}" class="twitter-hashtag-button" data-show-count="false">Tweet #{{info.eventHashtag}}</a></ion-label>
           <twitter-timeline>
               <a class="twitter-timeline"
